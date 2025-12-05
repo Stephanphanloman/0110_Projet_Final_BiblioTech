@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiblioTech – Gestion Bibliothèque</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <h1>📚 BIBLIO MANAGER PRO</h1>
+
+    <div class="controls">
+        <input type="text" id="titleInput" placeholder="Titre..." aria-label="Titre">
+        <input type="text" id="authorInput" placeholder="Auteur..." aria-label="Auteur">
+
+        <select id="categorySelect">
+            <option value="1">Science-Fiction</option>
+            <option value="2">Documentaire</option>
+            <option value="3">Roman</option>
+        </select>
+
+        <input type="text" id="isbnInput" placeholder="ISBN" aria-label="ISBN">
+
+        <button id="saveBtn" class="btn-add">ENREGISTRER</button>
+
+        <br><br>
+
+        Recherche :
+        <input type="text" id="searchInput" placeholder="Rechercher..." aria-label="Recherche">
+
+        <span id="zoneMessage"></span>
+    </div>
+
+    <h3>Inventaire (<span id="count">0</span>)</h3>
+
+    <table id="booksTable">
+        <thead>
+            <tr>
+                <th>Num</th>
+                <th>Info Livre</th>
+                <th>Type</th>
+                <th>Détails</th>
+                <th>Opt</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <button id="resetBtn" class="btn-reset">⚠️ RAZ</button>
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
