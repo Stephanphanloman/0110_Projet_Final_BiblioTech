@@ -77,7 +77,7 @@ index.html                              # Nouveau point d'entrée (assaini)
 1. Cloner le projet :
 
 ```bash
-git clone https://github.com/votre-utilisateur/BiblioTech.git
+git clone https://github.com/votre-utilisateur/0110_Projet_Final_BiblioTech.git
 ```
 
 2. Ouvrir `index.html` dans un navigateur moderne.
