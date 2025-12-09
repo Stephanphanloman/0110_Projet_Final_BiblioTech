@@ -4,53 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BiblioTech – Gestion Bibliothèque</title>
+    <!-- Lien vers la feuille de style CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div class="wrapper">
-    <h1>📚 BIBLIO MANAGER PRO</h1>
+    <!-- Titre principal de l'application -->
+    <h1> BIBLIO MANAGER PRO</h1>
 
+    <!-- Zone de saisie et de contrôle -->
     <div class="controls">
+        <!-- Champ pour entrer le titre du livre -->
         <input type="text" id="titleInput" placeholder="Titre..." aria-label="Titre">
+        
+        <!-- Champ pour entrer l'auteur du livre -->
         <input type="text" id="authorInput" placeholder="Auteur..." aria-label="Auteur">
 
+        <!-- Menu déroulant pour choisir la catégorie -->
         <select id="categorySelect">
             <option value="1">Science-Fiction</option>
             <option value="2">Documentaire</option>
             <option value="3">Roman</option>
         </select>
 
+        <!-- Champ pour entrer l'ISBN -->
         <input type="text" id="isbnInput" placeholder="ISBN" aria-label="ISBN">
 
+        <!-- Bouton pour enregistrer un nouveau livre -->
         <button id="saveBtn" class="btn-add">ENREGISTRER</button>
 
         <br><br>
 
+        <!-- Champ de recherche pour filtrer les livres -->
         Recherche :
         <input type="text" id="searchInput" placeholder="Rechercher..." aria-label="Recherche">
 
+        <!-- Zone pour afficher des messages (confirmation, erreurs, etc.) -->
         <span id="zoneMessage"></span>
     </div>
 
+    <!-- Titre de la section inventaire avec compteur -->
     <h3>Inventaire (<span id="count">0</span>)</h3>
 
+    <!-- Tableau qui affichera la liste des livres -->
     <table id="booksTable">
         <thead>
             <tr>
-                <th>Num</th>
-                <th>Info Livre</th>
-                <th>Type</th>
-                <th>Détails</th>
-                <th>Opt</th>
+                <th>Num</th>        <!-- Numéro d'ordre -->
+                <th>Info Livre</th> <!-- Titre + Auteur -->
+                <th>Type</th>       <!-- Catégorie -->
+                <th>Détails</th>    <!-- ISBN ou autres infos -->
+                <th>Opt</th>        <!-- Options (modifier/supprimer) -->
             </tr>
         </thead>
-        <tbody id="tableBody"></tbody>
+        <tbody id="tableBody"></tbody> <!-- Corps du tableau rempli en JS -->
     </table>
 
+    <!-- Bouton pour réinitialiser l'inventaire -->
     <button id="resetBtn" class="btn-reset">⚠️ RAZ</button>
 </div>
 
+<!-- Scripts JavaScript pour gérer le stockage et l'application -->
 <script src="js/storage.js"></script>
 <script src="js/app.js"></script>
 
