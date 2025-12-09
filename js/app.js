@@ -5,6 +5,7 @@
 // On charge la base de données depuis le LocalStorage
 // (loadDatabase est définie dans storage.js)
 // → Si aucune donnée n'est présente, loadDatabase() renvoie un tableau vide.
+// ramy Données & Constantes
 let database = loadDatabase();
 
 // On calcule le plus grand uid déjà utilisé dans la base.
