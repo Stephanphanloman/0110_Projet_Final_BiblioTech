@@ -1,32 +1,59 @@
+/*  
+======================================
+ VARIABLES CSS (Thème et Couleurs)
+======================================
+Les variables définissent un thème uniforme : couleurs, fonds, accents.
+Cela facilite la maintenance et permet de changer le style facilement.
+*/
 :root {
-    --bg: #333;
-    --card: #444;
-    --muted: #222;
-    --accent: #0b67d0;
-    --danger: #c0392b;
+    --bg: #333;          /* Couleur de fond générale */
+    --card: #444;        /* Couleur des blocs et zones principales */
+    --muted: #222;       /* Fond pour les sections secondaires */
+    --accent: #0b67d0;   /* Bleu utilisé pour les boutons d'action */
+    --danger: #c0392b;   /* Rouge pour les actions dangereuses (delete, reset) */
 }
 
+/*  
+======================================
+ STYLE GLOBAL DE LA PAGE
+======================================
+*/
 body {
-    background: var(--bg);
-    color: white;
-    font-family: "Courier New", monospace;
-    margin: 0;
+    background: var(--bg);                 /* Fond gris foncé */
+    color: white;                          /* Texte en blanc */
+    font-family: "Courier New", monospace; /* Police type machine à écrire */
+    margin: 0;                             /* Suppression des marges par défaut */
 }
 
+/*  
+======================================
+ CONTENEUR PRINCIPAL
+======================================
+*/
 .wrapper {
-    max-width: 1000px;
-    margin: 24px auto;
+    max-width: 1000px;    /* Largeur maximale pour un affichage centré */
+    margin: 24px auto;    /* Centre horizontalement */
     padding: 20px;
     background: var(--card);
-    border-radius: 8px;
+    border-radius: 8px;   /* Coins arrondis */
 }
 
+/*  
+======================================
+ BLOC DU FORMULAIRE DE SAISIE
+======================================
+*/
 .controls {
     background: var(--muted);
     padding: 15px;
     border-radius: 6px;
 }
 
+/*  
+======================================
+ STYLES DES CHAMPS INPUT ET SELECT
+======================================
+*/
 input, select {
     padding: 6px;
     margin-right: 6px;
@@ -34,8 +61,13 @@ input, select {
     border-radius: 4px;
 }
 
+/*  
+======================================
+ BOUTON "ENREGISTRER"
+======================================
+*/
 .btn-add {
-    background: var(--accent);
+    background: var(--accent); /* Bleu */
     color: white;
     padding: 7px 14px;
     border-radius: 4px;
@@ -43,16 +75,26 @@ input, select {
     cursor: pointer;
 }
 
+/*  
+======================================
+ BOUTON "RAZ" (RESET)
+======================================
+*/
 .btn-reset {
     margin-top: 15px;
     padding: 8px 12px;
-    background: var(--danger);
+    background: var(--danger); /* Rouge (danger) */
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
+/*  
+======================================
+ BOUTON SUPPRESSION INDIVIDUELLE
+======================================
+*/
 .btn-del {
     background: var(--danger);
     color: white;
@@ -62,25 +104,45 @@ input, select {
     cursor: pointer;
 }
 
+/*  
+======================================
+ TABLEAU PRINCIPAL
+======================================
+*/
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; /* Supprime les espaces entre les bordures */
     margin-top: 12px;
 }
 
+/*  
+======================================
+ CELLULES DU TABLEAU
+======================================
+*/
 th, td {
     border: 1px solid white;
     padding: 6px;
 }
 
+/*  
+======================================
+ STYLE DE LA COLONNE "Num"
+======================================
+*/
 td:first-child {
     color: orange;
-    width: 60px;
+    width: 60px;    /* Largeur fixe pour l'ID du livre */
 }
 
+/*  
+======================================
+ BADGE DE CATÉGORIE (Science-Fiction, Roman…)
+======================================
+*/
 .muted-pill {
     background: white;
     color: black;
     padding: 2px 6px;
-    border-radius: 4px;
+    border-radius: 4px;   /* Pastille arrondie */
 }
